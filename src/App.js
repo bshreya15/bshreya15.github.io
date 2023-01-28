@@ -1,13 +1,14 @@
-import './App.css';
+import React from "react";
+// import { ReactFragment } from "react";
+import "./App.css";
+import Header from "./components/header/Header";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        
-      </header>
-    </div>
+    <>
+      <Header />
+    </>
   );
-}
+};
 
 export default App;
