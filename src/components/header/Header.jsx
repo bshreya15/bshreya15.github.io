@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./header.css";
+import logo from "../../assets/girl.png";
 
 const Header = () => {
   // toggle menu
@@ -8,9 +9,14 @@ const Header = () => {
   return (
     <header className="header">
       <nav className="nav container">
-        <a href="index.html" className="nav__logo">
-          Shreya Bakshi
-        </a>
+        <div className="nav__left">
+          <img src={logo} alt=" " href="index.html" className="nav__img-logo"></img>
+          <div>
+            <a href="index.html" className="nav__logo">
+              Shreya Bakshi
+            </a>
+          </div>
+        </div>
 
         <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
           <ul className="nav__list grid">
@@ -45,7 +51,6 @@ const Header = () => {
         <div className="nav__toggle" onClick={() => showMenu(!Toggle)}>
           <i className="uil uil-apps"></i>
         </div>
-        
       </nav>
     </header>
   );
