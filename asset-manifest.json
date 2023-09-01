@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/portfolio-website/static/css/main.6ea169e3.css",
+    "main.js": "/portfolio-website/static/js/main.f52f2be5.js",
+    "static/media/shreya_img.png": "/portfolio-website/static/media/shreya_img.005ec9f72e4bc47e9afe.png",
+    "index.html": "/portfolio-website/index.html",
+    "main.6ea169e3.css.map": "/portfolio-website/static/css/main.6ea169e3.css.map",
+    "main.f52f2be5.js.map": "/portfolio-website/static/js/main.f52f2be5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6ea169e3.css",
+    "static/js/main.f52f2be5.js"
+  ]
+}
