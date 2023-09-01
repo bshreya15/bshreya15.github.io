@@ -11,6 +11,7 @@ const Data = () => {
       <h3 class="home__subtitle">Frontend Developer</h3>
       <div class="home__description">
         <p>Welcome to my online showcase! </p>
+        <br></br>
         <p>
           Here you will find a showcase of my skills and experience in building
           user-friendly and visually appealing websites. My expertise includes
