@@ -6,7 +6,7 @@ const Data = () => {
     <div class="home__data">
       <div className="home__title-wave">
         <h1 class="home__title">Shreya Bakshi</h1>
-        <img src={wave} alt="" className="wave"/>
+        <img src={wave} alt="" className="wave" />
       </div>
       <h3 class="home__subtitle">Frontend Developer</h3>
       <div class="home__description">
@@ -20,9 +20,12 @@ const Data = () => {
           mobile-friendly websites that look and function great on all devices.
         </p>
       </div>
-      <a href="#contact" class="button button--flex">
-        Say Hello!
-      </a>
+      <br></br>
+      <div class="home__button">
+        <a href="#contact" class="button button--flex">
+          Say Hello!
+        </a>
+      </div>
     </div>
   );
 };

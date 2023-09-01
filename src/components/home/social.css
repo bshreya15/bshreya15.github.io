@@ -1,0 +1,28 @@
+.home__social {
+  display: grid;
+  grid-template-columns: max-content;
+  row-gap: 1rem;
+}
+
+.home__social-icon {
+  font-size: 1.25rem;
+  color: var(--title-color);
+}
+
+.home__social-icon:hover {
+  color: var(--title-color-dark);
+}
+
+/* breakpoints */
+/* md devices */
+@media screen and (max-width: 768px) {
+  .home__social {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .home__social-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
