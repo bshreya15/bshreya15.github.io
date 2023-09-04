@@ -3,13 +3,13 @@ import wave from "../../assets/waving-hand.png";
 
 const Data = () => {
   return (
-    <div class="home__data">
+    <div className="home__data">
       <div className="home__title-wave">
-        <h1 class="home__title">Shreya Bakshi</h1>
+        <h1 className="home__title">Shreya Bakshi</h1>
         <img src={wave} alt="" className="wave" />
       </div>
-      <h3 class="home__subtitle">Frontend Developer</h3>
-      <div class="home__description">
+      <h3 className="home__subtitle">Frontend Developer</h3>
+      <div className="home__description">
         <p>Welcome to my online showcase! </p>
         <br></br>
         <p>
@@ -22,8 +22,8 @@ const Data = () => {
         </p>
       </div>
       <br></br>
-      <div class="home__button">
-        <a href="#contact" class="button button--flex">
+      <div className="home__button">
+        <a href="#contact" className="button button--flex">
           Say Hello!
         </a>
       </div>
