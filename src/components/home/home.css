@@ -42,4 +42,8 @@
     grid-template-columns: 1fr;
   }
 
+  .home__img {
+    width: 200px;
+    height: 200px;
+  }
 }

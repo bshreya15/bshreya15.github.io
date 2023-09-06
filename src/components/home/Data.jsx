@@ -10,7 +10,7 @@ const Data = () => {
       </div>
       <h3 className="home__subtitle">Frontend Developer</h3>
       <div className="home__description">
-        <p>Welcome to my online showcase! </p>
+        <p>Welcome to my online portfolio! </p>
         <br></br>
         <p>
           Here you will find a showcase of my skills and experience in building
