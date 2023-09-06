@@ -184,6 +184,9 @@ img {
   .section {
     padding: 2rem 0 2rem;
   }
+  .main {
+    padding-bottom: 4rem;
+  }
 }
 
 @media screen and (max-width: 576px) {
