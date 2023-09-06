@@ -1,5 +1,4 @@
 .skills {
-  /* min-height: 100vh; */
   margin: 0;
   padding: 1rem;
   display: grid;
@@ -13,20 +12,12 @@
   display: grid;
   place-items: center;
   overflow: hidden;
-
-  transition: opacity 5s ease-in-out;
 }
 
 .slide-track {
   display: flex;
   width: max-content;
   animation: scroll 40s linear infinite;
-  /* transition: opacity 2s ease-in;
-  transition-property: scroll; */
-}
-
-.slide-track:hover {
-  animation-play-state: paused;
 }
 
 @keyframes scroll {
@@ -50,10 +41,15 @@
 /* breakpoints */
 /* lg devices */
 @media screen and (min-width: 768px) {
+  .slide-track:hover {
+    animation-play-state: paused;
+  }
+
   img {
     width: 100%;
     transition: transform 1s;
   }
+
   img:hover {
     transform: translateZ(1.5rem);
   }
