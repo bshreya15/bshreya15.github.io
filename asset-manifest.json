@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.487b0630.css",
+    "main.css": "/static/css/main.5efb9efb.css",
     "main.js": "/static/js/main.5ffd8d53.js",
     "static/media/shreya_img.png": "/static/media/shreya_img.005ec9f72e4bc47e9afe.png",
     "index.html": "/index.html",
-    "main.487b0630.css.map": "/static/css/main.487b0630.css.map",
+    "main.5efb9efb.css.map": "/static/css/main.5efb9efb.css.map",
     "main.5ffd8d53.js.map": "/static/js/main.5ffd8d53.js.map"
   },
   "entrypoints": [
-    "static/css/main.487b0630.css",
+    "static/css/main.5efb9efb.css",
     "static/js/main.5ffd8d53.js"
   ]
 }
