@@ -4,6 +4,7 @@ import "./globals.css";
 import { twMerge } from "tailwind-merge";
 import { ComponentPropsWithoutRef } from "react";
 import Header from "@/sections/Header";
+import ActiveSectionContextProvider from "@/context/active-section-context";
 
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
@@ -31,9 +32,11 @@ export default function RootLayout({
           calistoga.variable,
           "bg-gray-900 text-white antialiased font-sans", className)}
       >
+       <ActiveSectionContextProvider> 
         
       <Header />
         {children}
+        </ActiveSectionContextProvider>
       </body>
     </html>
   );

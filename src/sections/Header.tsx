@@ -2,21 +2,21 @@
 
 import React from "react";
 
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import { motion } from "framer-motion"; 
 import { links } from "@/lib/data";
 import Link from "next/link";
-// import clsx from "clsx";
-// import { useActiveSectionContext } from "@/context/active-section-context";
+import clsx from "clsx";
+import { useActiveSectionContext } from "@/context/active-section-context"; 
 
 export default function Header() {
-  // const { activeSection, setActiveSection, setTimeOfLastClick } =
-    // useActiveSectionContext();
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+  useActiveSectionContext();
 
-useEffect(() => {
-  // Force scroll to top on page load
-  window.scrollTo(0, 0);
-}, []);
+// useEffect(() => {
+//   // Force scroll to top on page load
+//   window.scrollTo(0, 0);
+// }, []);
 
   return (
     <header className="z-[999] relative">
@@ -35,35 +35,34 @@ useEffect(() => {
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
             >
+              {/*  dark:text-gray-400 dark:hover:text-gray-300 font-semibold */}
               <Link
                 className=
-                // {clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-400 dark:hover:text-gray-300 font-semibold"
-                  // ,
-                  // {
-                  //   "text-gray-950 dark:text-gray-200":
-                  //     activeSection === link.name,
-                  // }
-                // )}
+                {clsx(
+                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:hover:text-gray-300 "
+                  ,
+                  {
+                    "text-white dark:text-white-200":
+                      activeSection === link.name,
+                  }
+                )}
                 href={link.hash}
-                // onClick={() => {
-                //   setActiveSection(link.name);
-                //   setTimeOfLastClick(Date.now());
-                // }}
+                onClick={() => {
+                  setActiveSection(link.name);
+                  setTimeOfLastClick(Date.now());
+                }}
               >
                 {link.name}
 
-                {/* {link.name === activeSection && (
-                  <motion.span
-                    className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
-                    layoutId="activeSection"
-                    transition={{
-                      type: "spring",
-                      stiffness: 380,
-                      damping: 30,
-                    }}
-                  ></motion.span>
-                )} */}
+                {link.name === activeSection && (
+                <motion.span className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
+                layoutId="activeSection"
+                transition={{
+                  type: "spring",
+                  stiffness: 380,
+                  damping: 30,
+                }}></motion.span>
+                )}
               </Link>
             </motion.li>
           ))}
