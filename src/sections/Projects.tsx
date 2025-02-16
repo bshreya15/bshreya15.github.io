@@ -1,3 +1,4 @@
+"use client";
 import movieLandingPage from "@/assets/images/movie-recomm-page.png";
 import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
 import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
@@ -7,6 +8,9 @@ import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
+import { useInView } from "react-intersection-observer";
+import { useActiveSectionContext } from "@/context/active-section-context";
+import { useEffect } from "react";
 
 const portfolioProjects = [
   {
@@ -50,8 +54,16 @@ const portfolioProjects = [
 ];
 
 export const ProjectsSection = () => {
+  const {ref, inView} = useInView({ });
+  const {setActiveSection} = useActiveSectionContext();
+
+  useEffect(() => {
+    if(inView){
+      setActiveSection("Projects");
+    }
+  },[inView]);
   return (
-    <section className="pb-14 lg:py-24">
+    <section className="pb-14 lg:py-24 scroll-mt-[3rem]" ref={ref} id="projects">
       <div className="container">
         <SectionHeader
           sep="Real-world Results"
