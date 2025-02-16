@@ -16,7 +16,9 @@
     }
 
     .footer-fade {
+        width: 100vw;
         mask-image:radial-gradient(ellipse 100% 100% at bottom, black, transparent);
+
     }
     
     .map-memoji {
