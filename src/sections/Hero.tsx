@@ -10,13 +10,10 @@ export const HeroSection = () => {
       <div className="py-24 md:py-32 md:mt-8 lg:py-28 lg:mt-12 relative overflow-x-clip">
         <MotionBg />
         <div className="container">
-          <div className="flex flex-col items-center">
-            <MotionImage />
-          </div>
+          <MotionImage />
           <div className="max-w-lg mx-auto">
             <MotionText />
           </div>
-
           <MotionLinks />
         </div>
       </div>

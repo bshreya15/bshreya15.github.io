@@ -7,7 +7,7 @@ import Image from "next/image";
 import devImage from "@/assets/images/dev-img.jpeg"; 
 
 const MotionImage = () => (
-  <motion.div animate={{ opacity: 1, scale:1 }} initial={{ opacity: 0 , scale: 0}}>
+  <motion.div animate={{ opacity: 1, scale:1 }} initial={{ opacity: 0 , scale: 0}} className="flex flex-col items-center">
     <>
       <Image
         className="size-[150px] md:size-[230px] rounded-full border-[0.35rem] border-white object-cover"

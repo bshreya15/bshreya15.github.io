@@ -3,7 +3,7 @@ export const SectionHeader = ({
 }:{
     title: string;
     sep: string;
-    description: string;
+    description?: string;
 }) =>{
     return(
         <>
