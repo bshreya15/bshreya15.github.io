@@ -4,14 +4,20 @@ import { Card } from "@/components/Card";
 import { ToolboxItems } from "@/components/ToolboxItems";
 import Image from "next/image";
 import bookImage from "@/assets/images/book-cover.png";
+import grainImage from "@/assets/images/grain.jpg";
+import StarIcon from "@/assets/icons/star.svg";
 import JavaScriptIcon from "@/assets/icons/square-js.svg";
 import HTMLIcon from "@/assets/icons/html5.svg";
 import CSSIcon from "@/assets/icons/css3.svg";
 import ReactIcon from "@/assets/icons/react.svg";
 import ChromeIcon from "@/assets/icons/chrome.svg";
 import GithubIcon from "@/assets/icons/github.svg";
+import ReduxIcon from "@/assets/icons/redux.svg";
+import GraphqlIcon from "@/assets/icons/graphql.svg";
 import mapImage from "@/assets/images/map-dublin.png";
 import smileMemoji from "@/assets/images/girl1.png";
+import { twMerge } from "tailwind-merge";
+import Link from "next/link";
 
 const toolboxItems = [
   {
@@ -37,6 +43,14 @@ const toolboxItems = [
   {
     title: "Github",
     iconType: GithubIcon,
+  },
+  {
+    title: "Redux",
+    iconType: ReduxIcon,
+  },
+  {
+    title: "GrapghQL",
+    iconType: GraphqlIcon,
   },
 ];
 
@@ -83,12 +97,55 @@ export const AboutSection = () => {
   return (
     <div className="py-16 lg:py-24">
       <div className="container">
-        <SectionHeader
-          sep="About Me"
-          title="A Glimpse Into My World"
-          description="Learn more about who I am, what I do, and what inspires me."
-        />
+        <SectionHeader sep="About Me" title="A Glimpse Into My World" />
         <div className="mt-20 flex flex-col gap-8">
+          <div className="">
+            <div className="bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-3xl after:outline-white/20 after:pointer-events-none">
+              <div
+                className="absolute inset-0 -z-10 opacity-5"
+                style={{
+                  backgroundImage: `url(${grainImage.src})`,
+                }}
+              ></div>
+              <div className="flex flex-col p-6 md:py-8 md:px-10">
+                <div className="inline-flex items-center gap-2">
+                  <StarIcon className="size-9 text-emerald-300" />
+                  <h3 className="font-serif text-3xl">Learn more about me</h3>
+                </div>
+                <p className="text-base text-white/60 mt-4 text-justify">
+                  I am pursuing MSc in Data and Computational Science at{" "}
+                  <Link
+                    className="link-base"
+                    href="https://www.ucd.ie/"
+                    target="_blank"
+                  >
+                    University College Dublin, Ireland
+                  </Link>
+                  , where I have had the opportunity to build real-world
+                  projects using Python. I was also honored to win the{" "}
+                  <Link className="link-base" href="#" target="_blank">
+                    Bronze Award at Student Hackathon 2025
+                  </Link>{" "}
+                  and{" "}
+                  <Link className="link-base" href="#" target="_blank">
+                    Prototype Power Award at Student Hackathon 2024
+                  </Link>{" "}
+                  at UCD. With over 3 years of professional experience as a
+                  React developer, I specialize in building responsive and
+                  efficient web applications using modern frameworks like
+                  React.js, Next.js, and libraries such as TypeScript and
+                  JavaScript. My expertise extends to HTML, CSS, AEM, and the
+                  creation of scalable solutions tailored to diverse business
+                  needs. I am proficient in crafting intuitive and accessible
+                  user interfaces while adhering to WCAG 2.1 guidelines to
+                  ensure compliance and accessibility. I am always learning and
+                  growing, and I am excited to see where my journey takes me
+                  next.
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
             <Card className="h-[320px] md:col-span-2 lg:col-span-1 ">
               <CardHeader
@@ -108,12 +165,12 @@ export const AboutSection = () => {
               <ToolboxItems
                 items={toolboxItems}
                 className=""
-                itemsWrapperCN="animate-move-left [animation-duration:30s]"
+                itemsWrapperCN="animate-move-left [animation-duration:18s]"
               />
               <ToolboxItems
                 items={toolboxItems}
                 className="mt-6"
-                itemsWrapperCN="animate-move-right [animation-duration:30s]"
+                itemsWrapperCN="animate-move-right [animation-duration:15s]"
               />
             </Card>
           </div>
@@ -142,6 +199,7 @@ export const AboutSection = () => {
                 ))}
               </div>
             </Card>
+
             <Card className="h-[320px] p-0 md:col-span-2 lg:col-span-1">
               <Image
                 src={mapImage}

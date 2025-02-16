@@ -28,7 +28,16 @@
 
         @apply after:z-10 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-3xl after:outline-white after:pointer-events-none ;
     }
+
+    .take-space > p{
+        @apply max-w-full text-xl mt-8;
+    }
+
+    .link-base{
+        @apply text-white/70 hover:text-white transition duration-300;
+    }
 }
+
 
 @layer utilities{
     .container {
