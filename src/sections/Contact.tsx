@@ -1,10 +1,24 @@
+"use client";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
+import { useActiveSectionContext } from "@/context/active-section-context";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 export const ContactSection = () => {
+  const {ref, inView} = useInView({
+    threshold:0.5
+  });
+  const {setActiveSection} = useActiveSectionContext();
+
+  useEffect(() => {
+    if(inView){
+      setActiveSection("Contact");
+    }
+  },[inView]);
   return (
     <>
-      <div className="py-16 pt-12 lg:py-24 lg:pt-20">
+      <div className="py-16 pt-12 lg:py-24 lg:pt-20" ref={ref} id="contact">
         <div className="container">
           <div className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 py-8 px-10 rounded-3xl text-center md:text-left relative overflow-hidden z-0 ">
             <div
