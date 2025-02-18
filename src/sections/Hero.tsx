@@ -6,7 +6,7 @@ import MotionText from "@/components/MotionHeroText";
 
 export const HeroSection = () => {
   return (
-    <section>
+    <section id="home">
       <div className="py-24 md:py-32 md:mt-8 lg:py-28 lg:mt-12 relative overflow-x-clip">
         <MotionBg />
         <div className="container">
