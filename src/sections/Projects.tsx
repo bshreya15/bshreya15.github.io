@@ -54,16 +54,18 @@ const portfolioProjects = [
 ];
 
 export const ProjectsSection = () => {
-  const {ref, inView} = useInView({ });
-  const {setActiveSection} = useActiveSectionContext();
-
+  const { ref, inView } = useInView({
+    threshold: 0.3,
+  });
+  const { setActiveSection } = useActiveSectionContext();
+  
   useEffect(() => {
-    if(inView){
+    if (inView) {
       setActiveSection("Projects");
     }
-  },[inView]);
+  }, [inView]);
   return (
-    <section className="pb-14 lg:py-24 scroll-mt-[3rem]" ref={ref} id="projects">
+    <section className="pb-14 lg:py-24" ref={ref} id="projects">
       <div className="container">
         <SectionHeader
           sep="Real-world Results"
