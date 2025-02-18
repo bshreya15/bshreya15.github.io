@@ -8,7 +8,7 @@ html{
 
 @layer base{
     .nav-item{
-        @apply px-4 py-1.5 rounded-full text-white/70 text-sm md:text-lg font-semibold hover:bg-white/10 hover:text-white transition duration-300 ;  
+        @apply px-2 py-1.5 rounded-full text-white/70 text-sm md:text-lg font-semibold hover:bg-white/10 hover:text-white transition duration-300 ;  
     }
 
     .hero-ring{
@@ -40,6 +40,19 @@ html{
 
     .link-base{
         @apply text-white/70 hover:text-white transition duration-300;
+
+    }
+
+    .link-base--dark{
+            @apply text-gray-900 hover:text-purple-950 transition duration-300;
+    }
+
+    .form-style{
+        @apply  text-gray-950 font-sans font-medium placeholder-gray-500 bg-white/20 border border-gray-800/20 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-gray-900/50 focus:border-transparent;
+    }
+
+    .form-btn{
+        @apply bg-gray-900 w-auto items-center gap-2 text-white/80 border border-gray-800/20 rounded-lg px-4 py-2 focus:ring-2 focus:ring-gray-900/50 focus:border-transparent;
     }
 
     .date-style{
