@@ -1,10 +1,6 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-// import corpcommentImg from "@/public/corpcomment.png";
-// import rmtdevImg from "@/public/rmtdev.png";
-// import wordanalyticsImg from "@/public/wordanalytics.png";
 
 export const links = [
   {
@@ -16,16 +12,12 @@ export const links = [
     hash: "#about",
   },
   {
-    name: "Projects",
-    hash: "#projects",
-  },
-  {
-    name: "Skills",
-    hash: "#skills",
-  },
-  {
     name: "Experience",
     hash: "#experience",
+  },
+  {
+    name: "Projects",
+    hash: "#projects",
   },
   {
     name: "Contact",
@@ -34,55 +26,42 @@ export const links = [
 ] as const;
 
 export const experiencesData = [
+  
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
-    description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+    title: "Master's in Data and Computational Science",
+    location: "University College Dublin, Dublin, IRE",
+    description:"I am motivated by the transformative power of data in the age of AI. The program deepens my understanding of machine learning, data analytics, enabling me to uncover valuable insights from complex datasets. As AI continues to shape industries, I see immense potential in combining this knowledge with my front-end expertise to create more intelligent, data-driven user experiences that adapt to user needs in real time.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "2024 - Present",
   },
+  
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Frontend Consultant",
+    location: "Deloitte India, Bengaluru, IN",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "Got the opportunity to accelerate my career as a Frontend Consultant. I gained experience in building scalable solutions tailored to diverse business needs.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2023 - 2024",
+  },
+  
+  {
+    title: "Frontend Analyst",
+    location: "Accenture Pvt Ltd, Pune, IN",
+    description:
+      "I joined as a Frontend Associate and promoted to Analyst for Barclays UK. I got hands-on experience with React, JavaScript, TypeScript, jQuery, and WCAG guidelines with the opportunity to lead development projects.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2020 - 2023",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Bachelor's in Engineering",
+    location: "VTU, Bengaluru, IN",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "I completed my Bachelor's in Telecommunication Engineering at Visvesvaraya Technological University, graduating with First Class honors.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2016 - 2020",
   },
 ] as const;
 
-// export const projectsData = [
-//   {
-//     title: "CorpComment",
-//     description:
-//       "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-//     tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-//     imageUrl: corpcommentImg,
-//   },
-//   {
-//     title: "rmtDev",
-//     description:
-//       "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-//     tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-//     imageUrl: rmtdevImg,
-//   },
-//   {
-//     title: "Word Analytics",
-//     description:
-//       "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-//     tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-//     imageUrl: wordanalyticsImg,
-//   },
-// ] as const;
 
 export const skillsData = [
   "HTML",
