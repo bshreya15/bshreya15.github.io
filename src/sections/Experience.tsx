@@ -23,6 +23,7 @@ import { Fragment, use, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { experiencesData } from "@/lib/data";
+import { TapeSection } from "./Tape";
 
 const toolboxItems = [
   {
@@ -102,12 +103,12 @@ const testimonials = [
   {
     name: "Akash Ghate",
     position: "AVP at Barclays",
-    text: "I enjoyed working with Shreya for 2 years at Barclays. She was a valuable member of our frontend team and demonstrated an impressive command of React, JavaScript, TypeScript, jQuery, and WCAG guidelines, ensuring the seamless execution of our accessible user interfaces. Shreya also excels in deployment and debugging, which has significantly contributed to the reliability of our digital services."
+    text: "I enjoyed working with Shreya for 2 years at Barclays. She was a valuable member of our frontend team and demonstrated an impressive command of React, JavaScript, TypeScript, jQuery, and WCAG guidelines, ensuring the seamless execution of our accessible user interfaces. Shreya also excels in deployment and debugging, which has significantly contributed to the reliability of our digital services.",
   },
   {
     name: "Asif Hussain",
     position: "Solution Architect at Barclays",
-    text: "I worked with Shreya for 2 years at Barclays primarily in the Insurance and Savings domains. Shreya is an excellent Front-end developer with great work ethic. She was a strong member of the UI team and was able to complete tasks of all complexity with ease. I would highly recommend Shreya."
+    text: "I worked with Shreya for 2 years at Barclays primarily in the Insurance and Savings domains. Shreya is an excellent Front-end developer with great work ethic. She was a strong member of the UI team and was able to complete tasks of all complexity with ease. I would highly recommend Shreya.",
   },
 ];
 
@@ -122,7 +123,6 @@ export const ExperienceSection = () => {
       setActiveSection("Experience");
     }
   }, [inView]);
-  console.log(inView);
   return (
     <motion.section
       ref={ref}
@@ -130,8 +130,7 @@ export const ExperienceSection = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
       id="experience"
-      // scroll-mt-[1rem]
-      className=" py-16 lg:py-24"
+      className=" py-16 lg:py-24 "
     >
       <div className="container">
         <SectionHeader
@@ -188,9 +187,7 @@ export const ExperienceSection = () => {
                 <div className="flex gap-4 items-center">
                   <div>
                     <div className="font-semibold">{testimonial.name}</div>
-                    <div className="text-white/40">
-                      {testimonial.position}
-                    </div>
+                    <div className="text-white/40">{testimonial.position}</div>
                   </div>
                 </div>
                 <p className="mt-4 md:mt-6 text-sm md:text-base">
