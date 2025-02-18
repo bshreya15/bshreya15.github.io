@@ -11,7 +11,7 @@ import { useEffect } from "react";
 
 export const AboutSection = () => {
   const { ref, inView } = useInView({
-    threshold: 0.5,
+    threshold: 0.7,
   });
   const { setActiveSection } = useActiveSectionContext();
 
@@ -28,7 +28,6 @@ export const AboutSection = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
       id="about"
-      className="scroll-mt-[4rem]"
     >
       <div className="py-16 lg:py-24">
         <div className="container">
@@ -80,77 +79,6 @@ export const AboutSection = () => {
                 </div>
               </div>
             </div>
-
-            {/* <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
-              <Card className="h-[320px] md:col-span-2 lg:col-span-1 ">
-                <CardHeader
-                  title="My Reads"
-                  description="Explore the books shaping my perspective."
-                />
-                <div className="w-40 mx-auto mt-2 md:mt-0">
-                  <Image src={bookImage} alt="book cover" />
-                </div>
-              </Card>
-              <Card className="h-[320px] md:col-span-3 lg:col-span-2">
-                <CardHeader
-                  className=""
-                  title="My Toolbox"
-                  description="Explore the technologies and tools I use to craft exceptional digital experiences."
-                />
-                <ToolboxItems
-                  items={toolboxItems}
-                  className=""
-                  itemsWrapperCN="animate-move-left [animation-duration:18s]"
-                />
-                <ToolboxItems
-                  items={toolboxItems}
-                  className="mt-6"
-                  itemsWrapperCN="animate-move-right [animation-duration:15s]"
-                />
-              </Card>
-            </div>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
-              <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
-                <CardHeader
-                  title="Beyond the Code"
-                  description="Explore my interests and hobbies beyond the digital realm."
-                  className="px-6 py-6"
-                />
-                <div className="relative flex-1">
-                  {hobbies.map((hobby) => (
-                    <div
-                      key={hobby.title}
-                      className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute"
-                      style={{
-                        left: hobby.left,
-                        top: hobby.top,
-                      }}
-                    >
-                      <span className="font-medium text-gray-950">
-                        {hobby.title}
-                      </span>
-                      <span>{hobby.emoji}</span>
-                    </div>
-                  ))}
-                </div>
-              </Card>
-
-              <Card className="h-[320px] p-0 md:col-span-2 lg:col-span-1">
-                <Image
-                  src={mapImage}
-                  alt="map"
-                  quality={95}
-                  className="h-full w-full object-cover"
-                />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-24 from-emerald-300 to-sky-400 forced-color-adjust-none rounded-full bg-gradient-to-r after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
-                  <Image
-                    src={smileMemoji}
-                    alt="smiling emoji"
-                    className="size-36 absolute map-memoji"
-                  />
-                </div>
-              </Card>
-            </div> */}
           </div>
         </div>
       </div>
