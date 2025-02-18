@@ -2,9 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+    --line-color: #e5e7eb;
+}
+
 @layer base{
     .nav-item{
-        @apply px-4 py-1.5 rounded-full text-white/70 text-sm md:text-lg font-semibold hover:bg-white/10 hover:text-white transition duration-300 ;  
+        @apply px-2 py-1.5 rounded-full text-white/70 text-sm md:text-lg font-semibold hover:bg-white/10 hover:text-white transition duration-300 ;  
     }
 
     .hero-ring{
@@ -16,7 +20,9 @@
     }
 
     .footer-fade {
+        width: 100vw;
         mask-image:radial-gradient(ellipse 100% 100% at bottom, black, transparent);
+
     }
     
     .map-memoji {
@@ -25,10 +31,35 @@
     }
 
     .card-border {
-
         @apply after:z-10 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-3xl after:outline-white after:pointer-events-none ;
     }
+
+    .take-space > p{
+        @apply max-w-full text-xl mt-8;
+    }
+
+    .link-base{
+        @apply text-white/70 hover:text-white transition duration-300;
+
+    }
+
+    .link-base--dark{
+            @apply text-gray-900 hover:text-purple-950 transition duration-300;
+    }
+
+    .form-style{
+        @apply  text-gray-950 font-sans font-medium placeholder-gray-500 bg-white/20 border border-gray-800/20 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-gray-900/50 focus:border-transparent;
+    }
+
+    .form-btn{
+        @apply bg-gray-900 w-auto items-center gap-2 text-white/80 border border-gray-800/20 rounded-lg px-4 py-2 focus:ring-2 focus:ring-gray-900/50 focus:border-transparent;
+    }
+
+    .date-style{
+        color: #ffffff;
+    }
 }
+
 
 @layer utilities{
     .container {

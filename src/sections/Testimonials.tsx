@@ -58,12 +58,12 @@ export const TestimonialsSection = () => {
                 {testimonials.map((testimonial) => (
                   <Card
                     key={testimonial.name}
-                    className="max-w-xs md:max-w-md p-6 md:p-8 
-    transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-300"
+                    className="max-w-xs md:max-w-md p-6 md:p-8 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-300"
                   >
                     <div className="flex gap-4 items-center">
                       <div className="size-14 bg-gray-700 inline-flex items-center justify-center rounded-full flex-shrink-0">
                         <Image
+                          quality={95}
                           src={testimonial.avatar}
                           alt="client image"
                           className="max-h-full"

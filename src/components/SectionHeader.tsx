@@ -1,9 +1,9 @@
 export const SectionHeader = ({
     title, sep , description,
 }:{
-    title: string;
+    title?: string;
     sep: string;
-    description: string;
+    description?: string;
 }) =>{
     return(
         <>
