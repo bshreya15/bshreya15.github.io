@@ -1,103 +1,13 @@
 "use client";
 
 import { SectionHeader } from "@/components/SectionHeader";
-import { CardHeader } from "@/components/CardHeader";
-import { Card } from "@/components/Card";
-import { ToolboxItems } from "@/components/ToolboxItems";
-import Image from "next/image";
-import bookImage from "@/assets/images/book-cover.png";
 import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
-import JavaScriptIcon from "@/assets/icons/square-js.svg";
-import HTMLIcon from "@/assets/icons/html5.svg";
-import CSSIcon from "@/assets/icons/css3.svg";
-import ReactIcon from "@/assets/icons/react.svg";
-import ChromeIcon from "@/assets/icons/chrome.svg";
-import GithubIcon from "@/assets/icons/github.svg";
-import ReduxIcon from "@/assets/icons/redux.svg";
-import GraphqlIcon from "@/assets/icons/graphql.svg";
-import mapImage from "@/assets/images/map-dublin.png";
-import smileMemoji from "@/assets/images/girl1.png";
 import Link from "next/link";
-import MotionBg from "@/components/MotionHeroBg";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { useEffect } from "react";
-
-const toolboxItems = [
-  {
-    title: "JavaScript",
-    iconType: JavaScriptIcon,
-  },
-  {
-    title: "HTML5",
-    iconType: HTMLIcon,
-  },
-  {
-    title: "CSS3",
-    iconType: CSSIcon,
-  },
-  {
-    title: "React",
-    iconType: ReactIcon,
-  },
-  {
-    title: "Chrome",
-    iconType: ChromeIcon,
-  },
-  {
-    title: "Github",
-    iconType: GithubIcon,
-  },
-  {
-    title: "Redux",
-    iconType: ReduxIcon,
-  },
-  {
-    title: "GrapghQL",
-    iconType: GraphqlIcon,
-  },
-];
-
-const hobbies = [
-  {
-    title: "Painting",
-    emoji: "🎨",
-    left: "5%",
-    top: "5%",
-  },
-  {
-    title: "Photography",
-    emoji: "📸",
-    left: "50%",
-    top: "5%",
-  },
-  {
-    title: "Illustration",
-    emoji: "🖌️",
-    left: "10%",
-    top: "35%",
-  },
-  {
-    title: "Badminton",
-    emoji: "🏸",
-    left: "60%",
-    top: "35%",
-  },
-  {
-    title: "Reading",
-    emoji: "📖",
-    left: "46%",
-    top: "65%",
-  },
-  {
-    title: "Hiking",
-    emoji: "🚶🏽‍♀️",
-    left: "5%",
-    top: "65%",
-  },
-];
 
 export const AboutSection = () => {
   const { ref, inView } = useInView({
@@ -122,8 +32,8 @@ export const AboutSection = () => {
     >
       <div className="py-16 lg:py-24">
         <div className="container">
-          <SectionHeader sep="About Me" title="A Glimpse Into My World" />
-          <div className="mt-20 flex flex-col gap-8">
+          <SectionHeader sep="About Me" title="A Glimpse Into My World" description="Learn about my journey, combining academic success with real-world experience in tech." />
+          <div className="mt-12 flex flex-col gap-8">
             <div className="">
               <div className="bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-3xl after:outline-white/20 after:pointer-events-none">
                 <div
@@ -171,7 +81,7 @@ export const AboutSection = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
+            {/* <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
               <Card className="h-[320px] md:col-span-2 lg:col-span-1 ">
                 <CardHeader
                   title="My Reads"
@@ -240,7 +150,7 @@ export const AboutSection = () => {
                   />
                 </div>
               </Card>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
